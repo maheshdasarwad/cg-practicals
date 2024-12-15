@@ -21,7 +21,7 @@ class pattern {
                 putpixel(xc-xi,yc-yi, WHITE);
                 putpixel(xc+yi,yc+xi, WHITE);
                 putpixel(xc-yi,yc+xi, WHITE);
-                putpixel(xc+yi,yc-xi,WHITE);
+                putpixel(xc+yi,yc-xi, WHITE);
                 putpixel(xc-yi,yc-xi, WHITE);
                 
                 xi = xi + 1;
@@ -70,8 +70,8 @@ int main() {
     cin>>xc>>yc>>r;
     pattern obj;
     //circles
-    obj.bresenham(150,150,r);
-    obj.bresenham(150,150,r/2);
+    obj.bresenham(xc,yc,r);
+    obj.bresenham(xc,yc,r/2);
     //triangle
     obj.dda(xc,yc-r,xc-0.86*r,yc+0.5*r);
     obj.dda(xc,yc-r,xc+0.86*r,yc+0.5*r);
