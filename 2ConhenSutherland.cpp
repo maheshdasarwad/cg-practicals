@@ -22,17 +22,17 @@ class clipping
         int computeCode(int x, int y) {
             int code = INSIDE;
             if(x < xmin) {
-                code = LEFT;
+                code |= LEFT;
             }
             else if(x > xmax) {
-                code = RIGHT;
+                code |= RIGHT;
             }
             
             if(y < ymin) {
-                code = BOTTOM;
+                code |= BOTTOM;
             }
             else if(y > ymax) {
-                code = TOP;
+                code |= TOP;
             }
             return code;
         }
